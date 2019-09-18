@@ -1,0 +1,114 @@
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="master.css">
+    <title>Horoscope</title>
+    <script>
+      function test(){
+      var dt = new Date();
+      var month = dt.getMonth()
+      var pic = "<img src='horse.jpg' width='100px' height='100px'>"
+      var msg = "beware of your chair"
+      document.getElementById('sign').innerHTML = pic;
+      document.getElementById('fortune').innerHTML = msg;
+
+    }
+    function horoscope() {
+      var month = document.getElementById("userMonth").value;
+      var day = document.getElementById("userDay").value;
+
+      if ((month == 03 && day > 20) || (month == 04 && day <= 20))
+      {
+        var pic = "<img src = 'aries.jpg'>";
+        var fortune = "Your bank account will increase by 1 dollar";
+      }
+      else if((month == 4 && day > 20) || (month == 5 && day <= 21))
+      {
+        var pic = "<img src = 'taurus.jpg'>";
+        var fortune = "Your car will not break down today";
+      }
+      else if ((month == 5 && day > 21) || (month == 6 && day <= 21))
+      {
+        var pic = "<img src = 'gemini.jpg'>";
+        var fortune = "Your friends are just allies in the war of life";
+      }
+      else if ((month == 6 && day > 21) || (month == 7 && day <= 22))
+      {
+        var pic = "<img src = 'cancer.jpg'>";
+        var fortune = "Dont cross the street without looking both aways or it will be your demise";
+      }
+      else if ((month == 7 && day > 22) || (month == 8 && day <= 23))
+      {
+        var pic = "<img src = 'leo.jpg'>";
+        var fortune = "The lion within you will not show today";
+      }
+      else if ((month == 8 && day > 23) || (month == 9 && day <= 22))
+      {
+        var pic = "<img src = 'virgo.jpg'>";
+        var fortune = "The sun is not the moon today";
+      }
+      else if ((month == 9 && day > 22) || (month == 10 && day <= 23))
+      {
+        var pic = "<img src = 'libra.jpg'>";
+        var fortune = "You will do a extreme gamer move today";
+      }
+      else if ((month == 10 && day > 23) || (month == 11 && day <= 22))
+      {
+        var pic = "<img src = 'scorpio.jpg'>";
+        var fortune = "You will win 10000000000 free VBUCKS in the lottery";
+      }
+      else if ((month == 11 && day > 22) || (month == 12 && day <= 21))
+      {
+        var pic = "<img src = 'sagittarius.jpg'>";
+        var fortune = "Russia will send you an email";
+      }
+      else if ((month == 12 && day > 21) || (month == 01 && day <= 20))
+      {
+        var pic = "<img src = 'capricorn.jpg'>";
+        var fortune = "North Korea loves you today";
+      }
+      else if ((month == 01 && day > 20) || (month == 02 && day <= 18))
+      {
+        var pic = "<img src = 'aquarius.jpg'>";
+        var fortune = "Supreme Hoodie will be delivered August 32nd via Amazon Prime";
+      }
+      else if ((month == 02 && day > 18) || (month == 03 && day <= 20))
+      {
+        var pic = "<img src = 'pisces.jpg'>";
+        var fortune = "You will turn into a fish today for the rest of your life";
+      }
+      else{
+
+        var pic = "<img src = 'horse.jpg'>";
+        var fortune = "Type a real date horse!";
+
+      }
+      document.getElementById("sign").innerHTML = pic;
+      document.getElementById("fortune").innerHTML = fortune;
+
+
+
+
+
+
+
+    }
+    </script>
+  </head>
+  <body>
+    <p>Month and Day ( 00 / 00 )</p>
+     <hr>
+    <input type="number" id="userMonth" value="Month">
+    <br> <hr>
+    <input type="number" id="userDay" value="Day">
+    <br> <hr>
+    <input type="button"  value="Click for horoscope" onclick="horoscope()">
+    <br> <hr>
+
+    <span id="sign"></span>
+    <br>
+    <span id="fortune"></span>
+
+  </body>
+</html>
